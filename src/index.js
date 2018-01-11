@@ -6,13 +6,13 @@ import registerServiceWorker from './registerServiceWorker';
 
 var posts = [{
   title: 'Dinos rule!',
-  content: 'We are so neat',
-  author: 'T-Rex; King of Dinos',
+  content: 'Wow. We are so neat',
+  authors: ['T-Rex; King of Dinos', 'Baby T-Rex', 'Mama T-Rex'],
   comments: ['Eh, dinos are okay', 'Yeah, go dinos']
 }, {
   title: 'So offended',
-  content: 'I am from way, way longer ago than these young dinos. Jurassic rules, cretaceous sucks!',
-  author: 'Stegasaurus',
+  content: 'I am from way, way longer ago than these young whipper-snapper dinos. Jurassic rules, cretaceous sucks!',
+  authors: ['Stegasaurus'],
   comments: ['Cool it', 'Who cares, bro', 'Triassic or nothing!']
 }];
 
