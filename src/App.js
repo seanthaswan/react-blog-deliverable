@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 import {
@@ -54,15 +53,14 @@ class Post extends Component {
     return (
       <Router>
       <div className="Post">
-      <div className="nav">
-        <Link to="/">Home Page</Link>
-        <Link to="/blog">Blog</Link>
-        <Link to="/about">About Me</Link>
-        <Link to="/favorite/movie">Fave Movie</Link>
-        <Link to="/favorite/food">Fave Food</Link>
-      </div>
+      <nav>
+        <Link className="link" to="/">Home Page</Link>
+        <Link className="link" to="/blog">Blog</Link>
+        <Link className="link" to="/about">About Me</Link>
+        <Link className="link" to="/favorite/movie">Fave Movie</Link>
+        <Link className="link" to="/favorite/food">Fave Food</Link>
+      </nav>
       <header className="Post-header">
-          <img src={logo} className="Post-logo" alt="logo" />
           <h1 className="Post-title">Ya boy</h1>
           <p className="Post-intro">
             and his blog.
@@ -71,16 +69,14 @@ class Post extends Component {
         {/* <h3>On a scale of 1-10 this is how I feel</h3>
         <p>Current Mood: {this.state.moodPoints}</p>
         <button onClick={ (e)=> this.increaseMood(e) }>DO YOU FEEL GOOD??</button> */}
-
+        <div className="container">
         <Route exact path="/" component={Home} />
-        <Route path="/blog" component={
-          () => (<Blog posts={allPosts} />)
-        } />
+        <Route path="/blog" component={ () => (<Blog posts={allPosts} />)} />
         <Route path="/about" component={About}/>
         <Route path="/favorite/food" component={FaveMovie} />
         <Route path="/favorite/movie" component={FaveFood}/>
         <hr />
-
+        </div>
       </div>
       </Router>
     );
